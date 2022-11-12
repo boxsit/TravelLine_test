@@ -1,0 +1,277 @@
+{
+	"id": "b7440927-cf52-4cc9-aa3a-82ce0c1174c9",
+	"name": "TravelLine Partner - Content API",
+	"timestamp": "2022-11-11T20:34:19.427Z",
+	"collection_id": "15280604-43e98024-acb7-4231-9314-26856e240672",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 10,
+	"totalFail": 4,
+	"results": [
+		{
+			"id": "b95d2b1c-852b-4bd8-b9df-08834efb654f",
+			"name": "/v1/properties/events 1",
+			"url": "https://partner.qatl.ru/api/content//v1/properties/events?created=2019-06-20T10:41:04Z&count=200",
+			"time": 436,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 200ms": false,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				436
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": false,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "436eaec8-aeef-4556-93f9-03a77eb5fc3c",
+			"name": "/v1/properties/events 2",
+			"url": "https://partner.qatl.ru/api/content//v1/properties/events?created=2019-06-20T10:41:04Z&count=200&continue=continue",
+			"time": 89,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				89
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "b5f7f5d6-0552-478e-8c57-d6f6d40c08af",
+			"name": "/v1/properties",
+			"url": "https://partner.qatl.ru/api/content//v1/properties?count=200&include=all",
+			"time": 251,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				251
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": false
+				}
+			]
+		},
+		{
+			"id": "873ff8c0-736e-4640-a430-f7d2fedd44af",
+			"name": "/v1/properties/{propertyId}",
+			"url": "https://partner.qatl.ru/api/content//v1/properties/7291",
+			"time": 699,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				699
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": false
+				}
+			]
+		},
+		{
+			"id": "8bfcdf71-7d52-4af7-84d9-a2e8ffa60103",
+			"name": "/v1/meal-plans",
+			"url": "https://partner.qatl.ru/api/content//v1/meal-plans",
+			"time": 78,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				78
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "4be16c87-0159-4d3a-b9f2-f65fee4076d6",
+			"name": "/v1/room-type-categories",
+			"url": "https://partner.qatl.ru/api/content//v1/room-type-categories",
+			"time": 76,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				76
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "1c9443a8-c78a-481f-b5ac-5827b938d6b7",
+			"name": "/v1/room-amenity-categories",
+			"url": "https://partner.qatl.ru/api/content//v1/room-amenity-categories",
+			"time": 90,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				90
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1719,
+	"collection": {
+		"requests": [
+			{
+				"id": "b95d2b1c-852b-4bd8-b9df-08834efb654f",
+				"method": "GET"
+			},
+			{
+				"id": "436eaec8-aeef-4556-93f9-03a77eb5fc3c",
+				"method": "GET"
+			},
+			{
+				"id": "b5f7f5d6-0552-478e-8c57-d6f6d40c08af",
+				"method": "GET"
+			},
+			{
+				"id": "873ff8c0-736e-4640-a430-f7d2fedd44af",
+				"method": "GET"
+			},
+			{
+				"id": "8bfcdf71-7d52-4af7-84d9-a2e8ffa60103",
+				"method": "GET"
+			},
+			{
+				"id": "4be16c87-0159-4d3a-b9f2-f65fee4076d6",
+				"method": "GET"
+			},
+			{
+				"id": "1c9443a8-c78a-481f-b5ac-5827b938d6b7",
+				"method": "GET"
+			}
+		]
+	}
+}

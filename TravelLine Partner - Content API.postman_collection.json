@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "43e98024-acb7-4231-9314-26856e240672",
+		"name": "TravelLine Partner - Content API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15280604"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "/v1/properties/events",
+					"item": [
+						{
+							"name": "/v1/properties/events 1",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Response time is less than 200ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v1/properties/events?created=2019-06-20T10:41:04Z&count=200",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v1",
+										"properties",
+										"events"
+									],
+									"query": [
+										{
+											"key": "created",
+											"value": "2019-06-20T10:41:04Z"
+										},
+										{
+											"key": "count",
+											"value": "200"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/v1/properties/events 2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response time is less than 200ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/v1/properties/events?created=2019-06-20T10:41:04Z&count=200&continue=continue",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"v1",
+										"properties",
+										"events"
+									],
+									"query": [
+										{
+											"key": "created",
+											"value": "2019-06-20T10:41:04Z"
+										},
+										{
+											"key": "count",
+											"value": "200"
+										},
+										{
+											"key": "continue",
+											"value": "continue"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "/v1/properties",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/properties?count=200&include=all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "count",
+									"value": "200"
+								},
+								{
+									"key": "include",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/v1/properties/{propertyId}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/properties/:{propertyId}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"properties",
+								":{propertyId}"
+							],
+							"variable": [
+								{
+									"key": "{propertyId}",
+									"value": "7291"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/v1/meal-plans",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/v1/meal-plans",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"meal-plans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/v1/room-type-categories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/room-type-categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"room-type-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/v1/room-amenity-categories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/room-amenity-categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"room-amenity-categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "47306034-78fc-4767-bfd9-25e78825b985",
+				"type": "string"
+			},
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "x-api-key",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
